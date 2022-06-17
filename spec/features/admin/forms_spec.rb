@@ -292,7 +292,7 @@ feature "Forms", js: true do
             it "has inline editable title that can be updated and saved" do
               find(".survey-title-input").set("Updated Form Title")
               find(".survey-title-input").native.send_key :tab
-              expect(page).to have_content("survey title saved")
+              expect(page).to have_content("form title saved")
               # and persists after refresh
               visit questions_admin_form_path(form)
               expect(find(".survey-title-input").value).to eq("Updated Form Title")

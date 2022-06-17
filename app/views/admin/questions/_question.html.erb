@@ -1,4 +1,11 @@
-<%= render 'components/forms/edit/button_dropdown', { form: form, question: question } if form_permissions?(form: form) %>
+<div class="text-center margin-top-1 text-base-light" style="position: relative;">
+  <span class="fa fa-grip-horizontal usa-tooltip"
+      data-position="right"
+      title="Drag this Question to reorder">
+  </span>
+
+  <%= render 'components/forms/edit/button_dropdown', { form: form, question: question } if form_permissions?(form: form) %>
+</div>
 
 <% if question.question_type == "text_field" %>
 <% @form_component_path = 'components/forms/edit/question_types/text_field' %>
